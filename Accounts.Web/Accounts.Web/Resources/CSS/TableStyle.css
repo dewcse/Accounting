@@ -1,0 +1,78 @@
+﻿
+.NormalRowAcc {
+    background-color: none;
+    cursor: pointer;
+}
+
+.GrayRowAcc {
+    background-color: #f0ffff;
+    cursor: pointer;
+}
+
+.NormalRow {
+    background-color: none;
+}
+
+.GrayRow {
+    background-color: #DCDCDC;
+}
+
+.SubHeader {
+    padding: 2px 0px 5px 20px !important;
+}
+
+.SubTableBorder {
+    border: 1px solid #A7A7A7;
+}
+
+.SubHeaderRow {
+    background-color: #C1DAD6;
+}
+
+.SelectedRowAcc {
+    background-color: #DAC1C1 !important;
+    cursor: pointer;
+}
+
+.FooterRow {
+    border-color: #dadada;
+    background-color: #ACACAC;
+}
+#main-content table {
+                width: 100%;
+                border-collapse: collapse;
+                }
+                
+#main-content table thead th {
+                font-weight: bold;
+                font-size: 15px;
+                /*border-bottom: 1px solid #ddd;*/
+                }
+                
+#main-content tbody {
+                /*border-bottom: 1px solid #ddd;*/
+                }
+                
+#main-content tbody tr {
+                /*background: #fff;*/
+                }
+              
+#main-content tbody tr.alt-row {
+                background: #f3f3f3;
+                }
+                
+#main-content table td,
+#main-content table th {
+                padding: 2px;
+                line-height: 1.3em;
+                }        
+				
+#main-content table tfoot td .bulk-actions {
+                padding: 15px 0 5px 0;
+                } 
+				
+#main-content table tfoot td .bulk-actions select {
+                padding: 4px;
+				border: 1px solid #ccc;
+                }      
+  

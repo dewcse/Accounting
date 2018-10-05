@@ -1,0 +1,144 @@
+﻿@{
+    Layout = null;
+
+}
+<script src="~/Scripts/Vendor/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/Vendor/bootstrap.js"></script>
+<script src="~/Scripts/Vendor/jquery.blockUI.js"></script>
+<link href="~/Resources/CSS/toastr.css" rel="stylesheet" />
+<script src="~/Scripts/Vendor/toastr.js"></script>
+<script src="~/Scripts/Accounts/Common.js"></script>
+<style>
+    .ReportBorderL {
+        border-style: none;
+        border-color: inherit;
+        border-width: 0;
+        background: #FFF;
+        width: 11in;
+        /*// min-height:8.5in;*/
+        padding: 15px;
+        box-shadow: 2px 2px 9px 1px rgba(119, 119, 119, 0.61);
+        -moz-box-shadow: 2px 2px 9px 1px rgba(119, 119, 119, 0.61);
+        -webkit-box-shadow: 2px 2px 9px 1px rgba(119, 119, 119, 0.61);
+        height: auto;
+    }
+
+    .ReportTitle {
+        margin-top: 15px;
+        background: #FFF;
+        border: 1px solid #A5A5A5;
+        width: 300px;
+        padding: 5px;
+        box-shadow: 2px 2px 9px 1px rgba(119, 119, 119, 0.61);
+        -moz-box-shadow: 2px 2px 9px 1px rgba(119, 119, 119, 0.61);
+        -webkit-box-shadow: 2px 2px 9px 1px rgba(119, 119, 119, 0.61);
+        font-weight: bold;
+    }
+
+    .Company {
+        font-weight: bold;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .Address1 {
+        font-size: 11px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .Address2 {
+        font-size: 11px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .Address3 {
+        font-size: 11px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .footer {
+        font-size: 11px;
+        margin-top: 25px;
+        border-top: 1px solid #000;
+    }
+
+
+    table.tableAllBorder {
+        border-collapse: collapse;
+    }
+
+        table.tableAllBorder td, table.tableAllBorder th {
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+    .paraTitle {
+        font-weight: bold;
+    }
+
+    .total {
+        font-weight: bold;
+    }
+
+    .center {
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+
+    table.tableApproval {
+        border-collapse: collapse;
+    }
+
+        table.tableApproval td, table.tableApproval th {
+            border: 1px solid rgba(119, 119, 119, 0.61);
+            padding: 2px;
+        }
+</style>
+<script>
+    $(function () {
+
+        var data1 = new Object();
+
+        data1.fromDate = GetParameterValues('FromDate');
+        data1.toDate = GetParameterValues('ToDate');
+        data1.voucherType = GetParameterValues('ReportStatus');
+
+        $.blockUI({ message: '<h1><img src="../Resources/Images/busy.gif" /> Please wait a moment...</h1>' });
+
+        if (data1.voucherType == 1) { var Url = trailBalance_HTML; }
+        if (data1.voucherType == 2) { var Url = incomeStatement_HTML; }
+        if (data1.voucherType == 3) { var Url = balanceSheet_HTML; }
+
+        $.ajax({
+            url: Url,
+            type: 'GET',
+            data: data1,
+            success: function (data) {
+                $(document).ajaxStop($.unblockUI);
+                var list = JSON.parse(data);
+                console.log(list);
+                if (list.statusCode == '200') {
+                    //BindTable(list.ledgerListForView);
+                    $('.fieldsetTopMargin').html(list.report);
+                }
+                else {
+                    toastr.options.timeOut = 3500;
+                    toastr.warning(list.statusMessage);
+                }
+            },
+            error: function (xhr) {
+                $(document).ajaxStop($.unblockUI);
+                toastr.options.timeOut = 3500;
+                toastr.warning(xhr.status + ': ' + xhr.statusText);
+            }
+        })
+    })
+</script>
+
+<div class="col-md-12 fieldsetTopMargin" align="center">
+</div>

@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <style>
+        .rownewss {
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+            /*margin-top: 5px;*/
+        }
+    </style>
+    <script src="~/Scripts/Accounts/ViewLedgerList.js"></script>
+}
+
+<body>
+    <div class="heading">
+        <h2>Vouchers List</h2>
+    </div>
+    <div class="form-horizontal">
+
+        <div class="row rownewss">
+            <fieldset class="well col-md-12">
+
+                <div class="col-md-2 fieldsetTopMargin">
+                    <label class="control-label">From: </label>
+                    <input type="text" id="fromDate" placeholder="From Date" style="width:70%" />
+                </div>
+                <div class="col-md-2 fieldsetTopMargin">
+                    <label class="control-label">To: </label>
+                    <input type="text" id="toDate" placeholder="To Date" style="width:70%" />
+                </div>
+
+                <div class="col-md-7 fieldsetTopMargin">
+                    <label class="control-label">View Status: </label>
+                    <input type="radio" name="ledgerList" value="0" checked="checked" />All &nbsp; &nbsp;
+                    <input type="radio" name="ledgerList" value="1" />Journal Voucher &nbsp; &nbsp;
+                    <input type="radio" name="ledgerList" value="2" />Payment Voucher &nbsp; &nbsp;
+                    <input type="radio" name="ledgerList" value="3" />Receipt Voucher &nbsp; &nbsp;
+                </div>
+
+                <div class="col-md-1 text-right">
+                    <button id="btnView" class="btn btn-sm btn-success fieldsetTopMargin">View</button>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12 pre-scrollable" id="ledgerList"></div>
+        <div class="well" id="btnDIV" align="right" style="margin-left: 12px !important; margin-right: 12px !important; margin-top: 15px;">
+            <button class="btn btn-primary" id="btnView" name="View">Receive</button>
+        </div>
+    </div>
+
+</body>
+

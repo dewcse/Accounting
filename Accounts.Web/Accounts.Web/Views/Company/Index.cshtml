@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <script src="~/Scripts/Accounts/Company.js"></script>
+    <style type="text/css">
+        .uniform-input {
+            width: 80% !important;
+        }
+
+        .selector span {
+            width: 500px !important;
+        }
+
+        #txtAddress {
+            width: 80%;
+        }
+    </style>
+
+}
+<div class="heading">
+    <h2> Company </h2>
+</div>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">Company ID: </label>
+                <div class="col-md-8">
+                    <input type="text" disabled="disabled" id="txtCompanyId">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4"><span style="color: red">*</span>Name:</label>
+                <div class="col-md-8">
+                    <input type="text" id="txtName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4"><span style="color: red">*</span>Contact: </label>
+                <div class="col-md-8">
+                    <input type="text" id="txtContact" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Email:</label>
+                <div class="col-md-8">
+                    <input type="text" id="txtEmail" />
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label class="control-label col-md-4"><span style="color: red">*</span>Address: </label>
+                <div class="col-md-8">
+                    <textarea id="txtAddress" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Upload Image: </label>
+                <div class="col-md-8">
+                    <input type="file" name="logoCompany" id="logoCompany" style="width: 100%;" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4"></label>
+                <div class="col-md-8">
+                    <button class="btn btn-default" id="btnClear" name="Clear"><b>Clear</b></button>&nbsp; &nbsp;
+                    <button class="btn btn-info" id="btnSave" name="Save"><b>Save</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 pre-scrollable" id="companyInfoForEdit" align="left" style=" margin-top: 15px;">
+        </div>
+    </div>
+</div>
+
+

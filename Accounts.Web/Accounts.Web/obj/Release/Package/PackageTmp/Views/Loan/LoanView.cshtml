@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <style>
+        .rownewss {
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+            /*margin-top: 5px;*/
+        }
+    </style>
+    <script src="~/Scripts/Accounts/LoanView.js"></script>
+}
+
+<body>
+    <div class="heading">
+        <h2>Loan List</h2>
+    </div>
+    <div class="form-horizontal">
+
+        <div class="row rownewss">
+            <fieldset class="well col-md-8">
+                
+                <div class="col-md-10 fieldsetTopMargin">
+                    <label class="control-label">Loan Status: </label>
+                    <input type="radio" name="ledgerList" value="0" checked="checked" />All &nbsp; &nbsp;
+                    <input type="radio" name="ledgerList" value="1" />Due &nbsp; &nbsp;
+                    <input type="radio" name="ledgerList" value="2" />Payment
+                </div>
+
+                <div class="col-md-2 text-right fieldsetTopMargin">
+                    <button id="btnView" class="btn btn-sm btn-success fieldsetTopMargin">View</button>
+                </div>
+
+            </fieldset>
+        </div>
+        <div>
+            <div class="col-md-10" id="loanListView"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalShow"></div>
+    @*<div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is a small modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+</body>
+

@@ -1,0 +1,15 @@
+F:\Projects\Accounting\Accounts.Web\Accounts.Domain\bin\Debug\Accounts.Domain.dll
+F:\Projects\Accounting\Accounts.Web\Accounts.Domain\bin\Debug\Accounts.Domain.pdb
+F:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.csprojResolveAssemblyReference.cache
+F:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.dll
+F:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.pdb
+D:\Project\Accounting\Accounts.Web\Accounts.Domain\bin\Debug\Accounts.Domain.dll
+D:\Project\Accounting\Accounts.Web\Accounts.Domain\bin\Debug\Accounts.Domain.pdb
+D:\Project\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.csprojResolveAssemblyReference.cache
+D:\Project\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.dll
+D:\Project\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.pdb
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\bin\Debug\Accounts.Domain.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\bin\Debug\Accounts.Domain.pdb
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.csprojResolveAssemblyReference.cache
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Debug\Accounts.Domain.pdb

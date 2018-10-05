@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Accountns</title>
+    <meta name="author" content="SuggeElson" />
+    <meta name="description" content="Supr admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />
+    <meta name="keywords" content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, masonry, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap" />
+    <meta name="application-name" content="Supr admin template" />
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Force IE9 to render in normal mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Core stylesheets do not remove -->
+    <link id="bootstrap" href="~/Resources/Template/css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Resources/Template/css/bootstrap/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="~/Resources/Template/css/supr-theme/jquery.ui.supr.css" rel="stylesheet" type="text/css" />
+    <link href="~/Resources/Template/css/icons.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugins stylesheets -->
+    <link href="~/Resources/Template/plugins/misc/qtip/jquery.qtip.css" rel="stylesheet" type="text/css" />
+    <link href="~/Resources/Template/plugins/misc/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <link href="~/Resources/Template/plugins/misc/search/tipuesearch.css" type="text/css" rel="stylesheet" />
+
+    <link href="~/Resources/Template/plugins/forms/uniform/uniform.default.css" type="text/css" rel="stylesheet" />
+    <style>
+        .paging-nav {
+            text-align: right;
+            padding-top: 2px;
+        }
+
+            .paging-nav a {
+                margin: auto 1px;
+                text-decoration: none;
+                display: inline-block;
+                padding: 1px 7px;
+                background: #91b9e6;
+                color: white;
+                border-radius: 3px;
+            }
+
+            .paging-nav .selected-page {
+                background: #187ed5;
+                font-weight: bold;
+            }
+
+        .paging-nav {
+            margin: 5px auto;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <!-- Main stylesheets -->
+    <link href="~/Resources/Template/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom stylesheets ( Put your own changes here ) -->
+    <link href="~/Resources/Template/css/custom.css" rel="stylesheet" type="text/css" />
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="~/Resources/Template/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Resources/Template/images/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Resources/Template/images/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Resources/Template/images/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="~/Resources/Template/images/apple-touch-icon-57-precomposed.png" />
+
+    <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
+    <meta name="application-name" content="Supr" />
+    <meta name="msapplication-TileColor" content="#3399cc" />
+
+    <!-- Load modernizr first -->
+    <script type="text/javascript" src="~/Resources/Template/js/libs/modernizr.js"></script>
+
+    <!-- Le javascript
+          ================================================== -->
+    <!-- Important plugins put in all pages -->
+    <script type="text/javascript" src="~/Scripts/Vendor/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Vendor/jquery-ui-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/js/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/js/libs/jRespond.min.js"></script>
+
+    <!-- Charts plugins -->
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/flot/jquery.flot.grow.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/flot/jquery.flot.tooltip_0.4.4.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/flot/jquery.flot.orderBars.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/sparkline/jquery.sparkline.min.js"></script><!-- Sparkline plugin -->
+    <script type="text/javascript" src="~/Resources/Template/plugins/charts/knob/jquery.knob.js"></script><!-- Circular sliders and stats -->
+    <!-- Misc plugins -->
+    <script type="text/javascript" src="~/Resources/Template/plugins/misc/qtip/jquery.qtip.min.js"></script><!-- Custom tooltip plugin -->
+    <script type="text/javascript" src="~/Resources/Template/plugins/misc/totop/jquery.ui.totop.min.js"></script> <!-- Back to top plugin -->
+    <!-- Search plugin -->
+    <script type="text/javascript" src="~/Resources/Template/plugins/misc/search/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="~/Resources/Template/plugins/misc/search/tipuesearch_data.js"></script><!-- JSON for searched results -->
+    <script type="text/javascript" src="~/Resources/Template/plugins/misc/search/tipuesearch.js"></script>
+    <!--Table Pagging-->
+    <script src="~/Scripts/Vendor/paging.js"></script>
+    <!-- Form plugins -->
+    <script type="text/javascript" src="~/Resources/Template/plugins/forms/uniform/jquery.uniform.min.js"></script>
+    <!-- Init plugins -->
+    <script type="text/javascript" src="~/Resources/Template/js/main.js"></script><!-- Core js functions -->
+    @*<script type="text/javascript" src="~/Resources/Template/js/dashboard.js"></script>*@<!-- Init plugins only for page -->
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content" class="clearfix">
+            <div class="contentwrapper">
+                <div class="row">
+                    @RenderBody()
+                    @RenderSection("SPAViews", required: false)
+                    <hr />
+                    <footer>
+                        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

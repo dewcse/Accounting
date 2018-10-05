@@ -1,0 +1,27 @@
+﻿@{
+
+}
+
+<div id="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/Home/Index">ERP.<span class="slogan">accounts</span></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon16 icomoon-icon-arrow-4"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            @Html.Partial("_LoginPartial")
+            @*<ul class="nav navbar-right usernav">
+                <li>
+                    <a href="#" class="text-danger avatar">
+                        <img src="~/Resources/Template/images/avatar.jpg" alt="" class="image" />
+                        <span class="txt" id="loginUserName"></span>
+                    </a>
+                </li>
+                <li><a href="#" id="logOut" onclick="logOut()"><span class="icon16 icomoon-icon-exit"></span><span class="txt"> Logout</span></a></li>
+            </ul>*@
+        </div><!-- /.nav-collapse -->
+    </nav>
+</div><!-- End #header -->

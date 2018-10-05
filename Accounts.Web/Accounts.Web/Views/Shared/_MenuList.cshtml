@@ -1,0 +1,135 @@
+﻿@{
+
+}
+
+<div id="sidebar">
+
+    <div class="sidebar-widget" style="margin: -1px 0 0 0;">
+        <h5 class="title" style="margin-bottom:0">Navigation</h5>
+    </div><!-- End .sidenav-widget -->
+    <div class="mainnav" id="MenuListLoad">
+        <ul>
+            <li>
+                <a class="@{if (ViewBag.Title != null || ViewBag.Title == "Company" || ViewBag.Title == "ChartOfAccountAdd" || ViewBag.Title == "ChartOfAccountView")
+                                { <text>hasUl</text>   } else { <text></text>   }}" href="#"><span class="icon16 cut-icon-equalizer"></span>Settings<span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                <ul class="sub" style="@{if (ViewBag.Title != null && (ViewBag.Title == "Company" || ViewBag.Title == "ChartOfAccountAdd" || ViewBag.Title == "ChartOfAccountView"))
+                                             { <text>display: block;</text>    } else { <text></text>    }}">
+
+                    <li>
+                        <a class="@{if (ViewBag.Title != null || ViewBag.Title == "Company")
+                                              { <text>Current</text>   } else { <text></text>   }}" href="@Url.Action("Index", "Company")"><span class="icon16 cut-icon-enter"></span>Company</a>
+                    </li>
+                    <li>
+                        <a class="@{if (ViewBag.Title != null || ViewBag.Title == "ChartOfAccountAdd" || ViewBag.Title == "ChartOfAccountView")
+                                { <text>hasUl</text>   } else { <text></text>   }}" href="#"><span class="icon16 icomoon-icon-list-2"></span>Chart of Account</a>
+                        <ul class="sub" style="@{if (ViewBag.Title != null && (ViewBag.Title == "ChartOfAccountAdd" || ViewBag.Title == "ChartOfAccountView"))
+                                             { <text>display: block;</text>    } else { <text></text>    }}">
+                            <li>
+                                <a class="@{if (ViewBag.Title != null && ViewBag.Title == "ChartOfAccountAdd")
+                                { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("Index", "ChartOfAccount")"><span class="icon16 typ-icon-plus"></span>Add Record</a>
+                            </li>
+                            <li>
+                                <a class="@{if (ViewBag.Title != null && ViewBag.Title == "ChartOfAccountView")
+                                              { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("EditView", "ChartOfAccount")"><span class="icon16 typ-icon-views"></span>View Record</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </li>
+
+            <li>
+                <a class="@{if (ViewBag.Title != null || ViewBag.Title == "JournalVoucherAdd" || ViewBag.Title == "JournalVoucherView" || ViewBag.Title == "PaymentVoucherAdd" || ViewBag.Title == "PaymentVoucherView"
+                                || ViewBag.Title == "ReceiptVoucherAdd" || ViewBag.Title == "ReceiptVoucherView" || ViewBag.Title == "ViewLedgerList")
+                          { <text>hasUl</text>   } else { <text></text>   }}" href="#"><span class="icon16 cut-icon-equalizer"></span>Voucher Entry<span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                <ul class="sub" style="@{if (ViewBag.Title != null && (ViewBag.Title == "JournalVoucherAdd" || ViewBag.Title == "JournalVoucherView" || ViewBag.Title == "PaymentVoucherAdd" || ViewBag.Title == "PaymentVoucherView"
+                                                                       || ViewBag.Title == "ReceiptVoucherAdd" || ViewBag.Title == "ReceiptVoucherView" || ViewBag.Title == "ViewLedgerList"))
+                                       { <text>display: block;</text>    } else { <text></text>    }}">
+                    <li>
+                        <a class="@{if (ViewBag.Title != null || ViewBag.Title == "JournalVoucherAdd" || ViewBag.Title == "JournalVoucherView" || ViewBag.Title == "PaymentVoucherAdd" || ViewBag.Title == "PaymentVoucherView"
+                                        || ViewBag.Title == "ReceiptVoucherAdd" || ViewBag.Title == "ReceiptVoucherView")
+                                  { <text>hasUl</text>   } else { <text></text>   }}" href="#"><span class="icon16 icomoon-icon-list-2"></span>Add Voucher</a>
+                        <ul class="sub" style="@{if (ViewBag.Title != null && (ViewBag.Title == "JournalVoucherAdd" || ViewBag.Title == "JournalVoucherView" || ViewBag.Title == "PaymentVoucherAdd" || ViewBag.Title == "PaymentVoucherView"
+                                                                               || ViewBag.Title == "ReceiptVoucherAdd" || ViewBag.Title == "ReceiptVoucherView"))
+                                               { <text>display: block;</text>    } else { <text></text>    }}">
+                            <li>
+                                <a class="@{if (ViewBag.Title != null && ViewBag.Title == "JournalVoucherAdd")
+                                          { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("AddJournal", "Voucher")"><span class="icon16 typ-icon-plus"></span>Journal Voucher</a>
+                            </li>
+                            @*<li>
+                                    <a class="@{if (ViewBag.Title != null && ViewBag.Title == "JournalVoucherView")
+                                                  { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("ViewJournal", "Voucher")"><span class="icon16 typ-icon-views"></span>View Journal</a>
+                                </li>*@
+                            <li>
+                                <a class="@{if (ViewBag.Title != null && ViewBag.Title == "PaymentVoucherAdd")
+                                          { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("AddPayment", "Voucher")"><span class="icon16 typ-icon-plus"></span>Payment Voucher</a>
+                            </li>
+                            @*<li>
+                                    <a class="@{if (ViewBag.Title != null && ViewBag.Title == "PaymentVoucherView")
+                                                  { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("ViewPayment", "Voucher")"><span class="icon16 typ-icon-views"></span>View Record</a>
+                                </li>*@
+
+                            <li>
+                                <a class="@{if (ViewBag.Title != null && ViewBag.Title == "ReceiptVoucherAdd")
+                                          { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("AddReceipt", "Voucher")"><span class="icon16 typ-icon-plus"></span>Receipt Voucher</a>
+                            </li>
+                            @*<li>
+                                    <a class="@{if (ViewBag.Title != null && ViewBag.Title == "ReceiptVoucherView")
+                                                  { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("ViewReceipt", "Voucher")"><span class="icon16 typ-icon-views"></span>View Record</a>
+                                </li>*@
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="@{if (ViewBag.Title != null && ViewBag.Title == "ViewLedgerList")
+                                  { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("ViewLedgerList", "Voucher")"><span class="icon16 typ-icon-arrow-down"></span>View Ledger</a>
+                    </li>
+                    @*<li>
+                            <a class="@{if (ViewBag.Title != null || ViewBag.Title == "PaymentVoucherAdd" || ViewBag.Title == "PaymentVoucherView")
+                                    { <text>hasUl</text>   } else { <text></text>   }}" href="#"><span class="icon16 icomoon-icon-list-2"></span>Payment Voucher</a>
+                            <ul class="sub" style="@{if (ViewBag.Title != null && (ViewBag.Title == "PaymentVoucherAdd" || ViewBag.Title == "PaymentVoucherView"))
+                                                 { <text>display: block;</text>    } else { <text></text>    }}">
+                                <li>
+                                    <a class="@{if (ViewBag.Title != null && ViewBag.Title == "PaymentVoucherView")
+                                                  { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("ViewPayment", "Voucher")"><span class="icon16 typ-icon-views"></span>View Record</a>
+                                </li>
+                            </ul>
+                        </li>*@
+
+                </ul>
+            </li>
+
+            @*<li>
+                <a class="@{if (ViewBag.Title != null || ViewBag.Title == "EntryLoan" || ViewBag.Title == "ViewLoan")
+                                { <text>hasUl</text>   } else { <text></text>   }}" href="#"><span class="icon16 cut-icon-equalizer"></span>Loan Entry<span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                <ul class="sub" style="@{if (ViewBag.Title != null && (ViewBag.Title == "EntryLoan" || ViewBag.Title == "ViewLoan"))
+                                             { <text>display: block;</text>    } else { <text></text>    }}">
+
+                    <li>
+                        <a class="@{if (ViewBag.Title != null && ViewBag.Title == "EntryLoan")
+                                      { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("Index", "Loan")"><span class="icon16 typ-icon-plus"></span>Add Loan</a>
+                    </li>
+                    <li>
+                        <a class="@{if (ViewBag.Title != null && ViewBag.Title == "ViewLoan")
+                                      { <text>current</text>   } else { <text></text>   }}" href="@Url.Action("LoanView", "Loan")"><span class="icon16 typ-icon-arrow-down"></span>View Loan</a>
+                    </li>
+                </ul>
+            </li>*@
+
+            <li>
+                <a class="@{if (ViewBag.Title != null || ViewBag.Title == "ReportView")
+                                { <text>hasUl</text>   } else { <text></text>   }}" href="#"><span class="icon16 cut-icon-equalizer"></span>Reports<span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                <ul class="sub" style="@{if (ViewBag.Title != null && (ViewBag.Title == "ReportView"))
+                                             { <text>display: block;</text>    } else { <text></text>    }}">
+                    <li>
+                        <a class="@{if (ViewBag.Title != null || ViewBag.Title == "ReportView")
+                                              { <text>Current</text>   } else { <text></text>   }}" href="@Url.Action("Reports", "Voucher")"><span class="icon16 cut-icon-enter"></span>Reports</a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+
+    </div>
+</div>

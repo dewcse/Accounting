@@ -1,0 +1,12 @@
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\Accounts.Data.dll.config
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\Accounts.Data.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\Accounts.Data.pdb
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\Accounts.Domain.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\EntityFramework.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\EntityFramework.SqlServer.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\Accounts.Domain.pdb
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\EntityFramework.xml
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\bin\Release\EntityFramework.SqlServer.xml
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\obj\Release\Accounts.Data.csprojResolveAssemblyReference.cache
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\obj\Release\Accounts.Data.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Data\obj\Release\Accounts.Data.pdb

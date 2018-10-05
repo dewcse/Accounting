@@ -1,0 +1,125 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <script src="~/Scripts/Accounts/PaymentVoucher.js"></script>
+    <style type="text/css">
+        .uniform-input {
+            width: 80% !important;
+        }
+
+        .rownewss {
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+            margin-top: 5px;
+            padding-bottom: -20px;
+        }
+
+        .ddlSize {
+            width: 80% !important;
+        }
+
+        #uniform-ddlPaidFrom {
+            width: 80% !important;
+        }
+
+        .selector span {
+            width: 500px !important;
+        }
+
+        .fieldsetTopMargin {
+            margin-top: 15px;
+        }
+    </style>
+}
+
+<div class="heading">
+    <h2> Payment Voucher </h2>
+</div>
+<div class="form-horizontal">
+    <div class="row">
+        <br />
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">Voucher Code: </label>
+                <div class="col-md-8">
+                    <input type="text" disabled="disabled" id="txtVoucherCode">
+                    <input type="hidden" id="lblVoucherNo" />
+                    <input type="hidden" id="lblVoucherType" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Date:</label>
+                <div class="col-md-8">
+                    <input type="text" id="txtDate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4"><span style="color: red">*</span>Paid From:</label>
+                <div class="col-md-8" id="ddlPaidFromOuter">
+                    <select id="ddlPaidFrom" class="form-control">
+                        <option value="-1">Select Cash of Account</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label class="control-label col-md-4">Payable: </label>
+                <div class="col-md-8">
+                    <input type="text" maxlength="100" id="txtPayable" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4"><span style="color: red">*</span>Reference: </label>
+                <div class="col-md-8">
+                    <input type="text" maxlength="100" value="#" id="txtReference" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4"> Note: </label>
+                <div class="col-md-8">
+                    <input type="text" id="txtNote" />
+                </div>
+            </div>
+            @*<div class="form-group">
+                    <label class="control-label col-md-4"></label>
+                    <div class="col-md-8">
+                        <button class="btn btn-default" id="btnClear" name="Clear"><b>Clear</b></button>&nbsp; &nbsp;
+                        <button class="btn btn-info" id="btnSave" name="Save"><b>Save</b></button>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+    <div class="col-md-12 responsive" id="chartOfAccountDiv" align="center" style=" margin-top: 15px;">
+    </div>
+    <div class="row rownewss">
+        <fieldset class="well col-md-12">
+            <div class="col-md-4 fieldsetTopMargin">
+
+                <div class="form-group">
+                    <button class="btn btn-primary" id="btnAdd" onclick="AddRow()">Add</button>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-4 fieldsetTopMargin">
+
+                <div class="form-group">
+                    <label class="control-label col-md-4"> Total Amount: </label>
+                    <div class="col-md-8">
+                        <input type="text" style="font-size:14px;" readonly="readonly" id="txtTotalAmount" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fieldsetTopMargin">
+                <div align="right">
+                    <button class="btn btn-default" id="btnClear" style="border: 1px solid red;"><b>Clear</b></button>&nbsp; &nbsp;
+                    <button class="btn btn-primary" id="btnSave"><b>Save</b></button>
+                </div>
+
+            </div>
+        </fieldset>
+    </div>
+</div>
+

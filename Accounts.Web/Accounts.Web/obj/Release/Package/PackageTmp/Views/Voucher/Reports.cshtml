@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <style>
+        .rownewss {
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+        }
+    </style>
+    <script>
+        $(function () {
+            var d = new Date();
+            d.setDate(d.getDate() - 3);
+
+            $("#toDate").val($.datepicker.formatDate("dd M yy", new Date()));
+            $("#fromDate").val($.datepicker.formatDate('dd M yy', d));
+
+            $("#fromDate").datepicker({ dateFormat: 'dd M yy', maxDate: 0 });
+            $("#toDate").datepicker({ dateFormat: 'dd M yy', maxDate: 0 });
+
+            $("#btnView").click(function () {
+                var data1 = new Object();
+                data1.reportStatus = $('input[name=reportStatus]:checked').val();
+
+                if (data1.reportStatus > 0) {
+
+                    data1.fromDate = $("#fromDate").datepicker('option', { dateFormat: 'dd/mm/yy' }).val(); // $('#fromDate').val();
+                    data1.toDate = $("#toDate").datepicker('option', { dateFormat: 'dd/mm/yy' }).val();  // $('#toDate').val();
+
+                    var url = reportView;
+                    url = url + '?ReportStatus=' + data1.reportStatus + '&FromDate=' + data1.fromDate + '&ToDate=' + data1.toDate;
+                    window.open(url, '_blank');
+                }
+                else {
+                    toastr.options.timeOut = 3500;
+                    toastr.warning("Please select a option of which report you want to see..");
+                }
+
+            })
+        })
+
+    </script>
+    @*<script src="~/Scripts/Accounts/ReportsList.js"></script>*@
+}
+
+<body>
+    <div class="heading">
+        <h2>Reports</h2>
+    </div>
+    <div class="form-horizontal">
+
+        <div class="row rownewss">
+            <fieldset class="well col-md-12">
+
+                <div class="col-md-2 fieldsetTopMargin">
+                    <label class="control-label">From: </label>
+                    <input type="text" id="fromDate" placeholder="From Date" style="width:70%" />
+                </div>
+                <div class="col-md-2 fieldsetTopMargin">
+                    <label class="control-label">To: </label>
+                    <input type="text" id="toDate" placeholder="To Date" style="width:70%" />
+                </div>
+
+                <div class="col-md-7 fieldsetTopMargin">
+                    <label class="control-label">Report For: </label>
+                    @*<input type="radio" name="ledgerList" value="0" checked="checked" />All &nbsp; &nbsp;*@
+                    <input type="radio" name="reportStatus" value="1" />Trail Balance &nbsp; &nbsp;
+                    <input type="radio" name="reportStatus" value="2" />Income Statements &nbsp; &nbsp;
+                    <input type="radio" name="reportStatus" value="3" />Balance Sheet &nbsp; &nbsp;
+                </div>
+
+                <div class="col-md-1 text-right">
+                    <button id="btnView" class="btn btn-sm btn-success fieldsetTopMargin">View</button>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+    @*<div class="row">
+            <div class="col-lg-12 pre-scrollable" id="ledgerList"></div>
+            <div class="well" id="btnDIV" align="right" style="margin-left: 12px !important; margin-right: 12px !important; margin-top: 15px;">
+                <button class="btn btn-primary" id="btnView" name="View">Receive</button>
+            </div>
+        </div>*@
+</body>
+

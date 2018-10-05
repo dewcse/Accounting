@@ -1,0 +1,5 @@
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\bin\Release\Accounts.Domain.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\bin\Release\Accounts.Domain.pdb
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Release\Accounts.Domain.csprojResolveAssemblyReference.cache
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Release\Accounts.Domain.dll
+E:\Projects\Accounting\Accounts.Web\Accounts.Domain\obj\Release\Accounts.Domain.pdb
